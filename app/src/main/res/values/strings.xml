@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Hanzi</string>
+
+    <string name="significado_1">Arroz</string>
+    <string name="pronunciacion_1">Hé</string>
+
+    <string name="significado_2">Árbol</string>
+    <string name="pronunciacion_2">Mù</string>
+
+    <string name="significado_3">Ojo</string>
+    <string name="pronunciacion_3">Mù</string>
+
+    <string name="significado_4">Mujer</string>
+    <string name="pronunciacion_4">Nǚ</string>
+
+    <string name="significado_5">Persona</string>
+    <string name="pronunciacion_5">Rén</string>
+
+    <string name="significado_6">Sol/Día</string>
+    <string name="pronunciacion_6">Rì</string>
+
+    <string name="significado_7">Montaña</string>
+    <string name="pronunciacion_7">Shān</string>
+
+    <string name="significado_8">Agua</string>
+    <string name="pronunciacion_8">Shuǐ</string>
+
+    <string name="significado_9">Lluvia</string>
+    <string name="pronunciacion_9">Yǔ</string>
+
+    <string name="significado_10">Mes/Luna</string>
+    <string name="pronunciacion_10">Yuè</string>
+
+</resources>

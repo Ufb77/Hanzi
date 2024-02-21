@@ -17,6 +17,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
+
 private val LightColors = lightColorScheme(
     primary = md_theme_light_primary,
     onPrimary = md_theme_light_onPrimary,
@@ -109,6 +110,7 @@ fun HanziTheme(
         colorScheme = colorScheme,
         //shapes = Shapes,
         typography = Typography,
+        shapes = Shapes,
         content = content
     )
 }

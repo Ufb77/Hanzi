@@ -1,6 +1,5 @@
 package com.example.hanzi
 
-import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -21,7 +20,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -39,7 +37,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Diccionario(context = LocalContext.current)
+                    Diccionario()
                 }
             }
         }
@@ -47,15 +45,15 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Diccionario(context: Context){
+fun Diccionario(){
 val misHanzi = RepositorioHanzi().getHanzi()
+
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         topBar = { BarraSuperior()})
     {innerPadding->
         
-        val hanzis = misHanzi
-        MostrarListaHanzi(lista = hanzis, contentPadding = innerPadding )
+        MostrarListaHanzi(lista = misHanzi, contentPadding = innerPadding)
 
     }
 }
@@ -68,18 +66,19 @@ fun BarraSuperior() {
 
         Row(verticalAlignment = Alignment.CenterVertically) {
 
-            Image(painterResource(id = R.drawable.caracter), contentDescription = null,
+            Image(painterResource(id = R.drawable.caracter),
+                contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
-                    .size(dimensionResource(id = R.dimen.image_size1))
+                    .size(dimensionResource(id = R.dimen.SizeImagenCabecera))
                     .clip(CircleShape))
-            Spacer(modifier = Modifier.size(dimensionResource(id = R.dimen.Spacer1)))
+
+            Spacer(modifier = Modifier.size(dimensionResource(id = R.dimen.SpacerTopBar)))
+
             Text(text = "Diccionario " + stringResource(id = R.string.app_name),
                 style = MaterialTheme.typography.displayLarge)
 
         }
-
-            //style = MaterialTheme.typography.displayLarge)
     })
 }
 
@@ -88,15 +87,15 @@ fun BarraSuperior() {
 @Composable
 fun PreviewTotal(){
     HanziTheme(darkTheme = false) {
-        Diccionario(context = LocalContext.current)
+        Diccionario()
     }
 }
 
 @Preview
 @Composable
-fun PreviewTotal1(){
+fun PreviewTotalOscura(){
 
     HanziTheme(darkTheme = true) {
-        Diccionario(context = LocalContext.current)
+        Diccionario()
     }
 }

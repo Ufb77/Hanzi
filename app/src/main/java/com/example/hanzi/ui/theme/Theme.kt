@@ -87,7 +87,7 @@ private val DarkColors = darkColorScheme(
 fun HanziTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
@@ -108,7 +108,6 @@ fun HanziTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        //shapes = Shapes,
         typography = Typography,
         shapes = Shapes,
         content = content

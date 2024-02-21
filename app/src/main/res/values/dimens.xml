@@ -15,10 +15,12 @@
   ~ limitations under the License.
   -->
 <resources>
-    <dimen name="padding_extrasmall">8dp</dimen>
     <dimen name="padding_small">10dp</dimen>
-    <dimen name="Spacer1">30dp</dimen>
-    <dimen name="size">50dp</dimen>
-    <dimen name="image_size1">50dp</dimen>
-    <dimen name="image_size2">100dp</dimen>
+    <dimen name="SpacerTopBar">30dp</dimen>
+    <dimen name="redondeoEsquinas">30dp</dimen>
+    <dimen name="sizeIcono">40dp</dimen>
+    <dimen name="SizeImagenCabecera">50dp</dimen>
+    <dimen name="sizeImagenHanzi">100dp</dimen>
+    <dimen name="paddingFilaHorizontal">16dp</dimen>
+    <dimen name="paddingFilaVertical">8dp</dimen>
 </resources>
